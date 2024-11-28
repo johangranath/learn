@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-    </style>
+    
 </head>
 <body>
     <h1>Welcome to Johans Website</h1>
     <p>This is a simple welcome page created using HTML.</p>
+    <ol class="mylist"></ol>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        var questions = ['4x5', '7x7', '3x8', '2x6'];
+        var cList = $('.mylist')
+        $.each(questions, function(i)
+        {
+            var li = $('<li/>')
+                .text(questions[i])
+                .appendTo(cList);
+            var input = $('<input/>')                
+                .appendTo(li);
+        });
+    });
+</script>
 </html>
