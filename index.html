@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
-    
-</head>
-<body>
-    <h1>Welcome to Math</h1>
-    <p>This is a simple page to train your multiplication skälls.</p>
-    <div class="mylist"></div>
-</body>
-<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 50px;
-    }
-</style>
-<script>
-    $(document).ready(function() {
-        var questions = ['4x5', '7x7', '3x8', '2x6', '9x9', '5x5', '6x6', '7x7', '8x8', '9x9'];
-        var i = 0;
-        while(i < questions.length)
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome Page</title>
+        
+    </head>
+    <body>
+        <h1>Welcome to Math</h1>
+        <p>This is a simple page to train your multiplication skills.</p>
+        <div class="mylist"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>    
+    <script>
+        $(document).ready(function() {
+            var questions = ['4x5', '7x7', '3x8', '2x6', '9x9', '5x5', '6x6', '7x7', '8x8', '9x9'];
+            var i = 0;
+            while(i < questions.length)
+            {
+                addQuestion(questions[i]);
+                i++;
+            }
+        });
+        function addQuestion(question)
         {
-            addQuestion(questions[i]);
-            i++;
+            var cList = $('.mylist')
+            var text = '<div>' + question + ' = <input type="text" id="answer" name="answer"/></div>';
+            cList.append(text);        
         }
-    });
-    function addQuestion(question)
-    {
-        var cList = $('.mylist')
-        var text = '<div>' + question + ' = <input type="text" id="answer" name="answer"/></div>';
-        cList.append(text);        
-    }
-</script>
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+    </body>
 </html>
