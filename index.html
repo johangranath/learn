@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Welcome to Math</h1>
-    <p>This is a simple page to train your multiplication skills.</p>
-    <ol class="mylist"></ol>
+    <p>This is a simple page to train your multiplication skälls.</p>
+    <div class="mylist"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 <style>
@@ -32,7 +32,7 @@
     function addQuestion(question)
     {
         var cList = $('.mylist')
-        var text = '<li>' + question + ' = <input type="text" id="answer" name="answer"/></li>';
+        var text = '<div>' + question + ' = <input type="text" id="answer" name="answer"/></div>';
         cList.append(text);        
     }
 </script>
