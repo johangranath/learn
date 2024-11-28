@@ -7,8 +7,8 @@
     
 </head>
 <body>
-    <h1>Welcome to Johans Website</h1>
-    <p>This is a simple welcome page created using HTML.</p>
+    <h1>Welcome to Math</h1>
+    <p>This is a simple page to train your multiplication skills.</p>
     <ol class="mylist"></ol>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
@@ -21,16 +21,19 @@
 </style>
 <script>
     $(document).ready(function() {
-        var questions = ['4x5', '7x7', '3x8', '2x6'];
-        var cList = $('.mylist')
-        $.each(questions, function(i)
+        var questions = ['4x5', '7x7', '3x8', '2x6', '9x9', '5x5', '6x6', '7x7', '8x8', '9x9'];
+        var i = 0;
+        while(i < questions.length)
         {
-            var li = $('<li/>')
-                .text(questions[i])
-                .appendTo(cList);
-            var input = $('<input/>')                
-                .appendTo(li);
-        });
+            addQuestion(questions[i]);
+            i++;
+        }
     });
+    function addQuestion(question)
+    {
+        var cList = $('.mylist')
+        var text = '<li>' + question + ' = <input type="text" id="answer" name="answer"/></li>';
+        cList.append(text);        
+    }
 </script>
 </html>
